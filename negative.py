@@ -31,7 +31,7 @@ def sendmessage(appid):
             res=requests.post(url=serviceapi,data=dataa).text
             if json.loads(res).get('code')==0:
                 #print(str(appid)+" "+schoolid+" "+userid+" "+username+" "+context)
-            counts+=1
+                counts+=1
         except:
             pass
 
