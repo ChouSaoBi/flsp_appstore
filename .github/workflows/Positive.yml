@@ -1,0 +1,24 @@
+name: 云·阴阳
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: 安装Python3环境
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: 安装requirements.txt
+        run: pip install -r requirements.txt
+
+      - name: 开跑
+        run: python positive.py
+        
