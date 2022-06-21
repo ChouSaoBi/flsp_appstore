@@ -171,7 +171,7 @@ def sendmessage(appid):
             pass
 
 app=[39088,21565]
-threadcount=8
+threadcount=32
 for appid in app:
     for i in range(threadcount):
         thread.start_new_thread(sendmessage,(appid,))
